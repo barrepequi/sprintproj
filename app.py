@@ -29,4 +29,4 @@ build_pie = st.checkbox('Ver gráfica de tipos de coches')
 if build_pie: # al hacer clic en el botón
     st.write('Creación de un gráfico pastel de los tipos de coches')
     fig = px.pie(car_data, names='type', title='Tipos de coches')
-    fig.show()
+    st.plotly_chart(fig, use_container_width=True) # mostrar gráfico interactivo
